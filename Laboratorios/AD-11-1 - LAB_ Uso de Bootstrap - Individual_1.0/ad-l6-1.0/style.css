@@ -1,0 +1,4 @@
+html 
+    .caja-variable {
+  width: 80%; /* Cambia su tamaño si el contenedor se estira o encoge */
+}
