@@ -1,0 +1,191 @@
+:root {
+  --ceniza: #FAFAFA;
+  --negro: #09090B;
+  --ruby: #A42C12;
+  --rejilla: #E4E4E7;
+  --gris: #71717A;
+  --gris-claro: #A1A1AA;
+
+  --bs-body-bg: var(--ceniza);
+  --bs-body-color: var(--negro);
+  --bs-body-font-family: "Inter", system-ui, sans-serif;
+  --bs-heading-color: var(--negro);
+  --bs-border-color: var(--rejilla);
+  --bs-border-radius: 0;
+  --bs-border-radius-sm: 0;
+  --bs-border-radius-lg: 0;
+}
+
+/* Tipografía */
+h1, h2, h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+}
+h1 { font-size: 40px; line-height: 1; letter-spacing: -0.04em; margin-bottom: 1rem; }
+h2 { font-size: 28px; line-height: 1.05; letter-spacing: -0.03em; }
+h3 { font-size: 24px; line-height: 1.2; letter-spacing: -0.02em; }
+
+@media (min-width: 768px) {
+  h1 { font-size: 56px; }
+  h2 { font-size: 44px; }
+}
+@media (min-width: 1200px) {
+  h1 { font-size: 72px; }
+}
+
+.data {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.price {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  font-size: 18px;
+}
+.muted { color: var(--gris); }
+
+/* Navbar */
+.site-nav {
+  background: var(--ceniza);
+  border-bottom: 1px solid var(--rejilla);
+}
+.site-nav .navbar-brand {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: var(--negro);
+}
+.site-nav .navbar-nav .nav-link {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--negro);
+  padding: 0.75rem 1.5rem;
+}
+.site-nav .navbar-nav .nav-link:hover,
+.site-nav .navbar-nav .nav-link.active {
+  color: var(--ruby);
+}
+@media (min-width: 992px) {
+  .site-nav .navbar-nav .nav-item + .nav-item .nav-link {
+    border-left: 1px solid var(--rejilla);
+  }
+}
+
+/* Cursor del logo */
+.cursor {
+  display: inline-block;
+  width: 0.4em;
+  height: 0.75em;
+  margin-left: 0.15em;
+  background: var(--ruby);
+  animation: blink 2s steps(1, end) infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+
+/* Columnas laterales (AD / News) */
+.side-col {
+  background: var(--rejilla);
+  display: flex;
+  flex-direction: column;
+  min-height: 80px;
+}
+.side-box {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gris);
+}
+
+/* Botones */
+.btn {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.btn-ruby {
+  --bs-btn-color: var(--ceniza);
+  --bs-btn-bg: var(--ruby);
+  --bs-btn-border-color: var(--ruby);
+  --bs-btn-hover-color: var(--ceniza);
+  --bs-btn-hover-bg: var(--negro);
+  --bs-btn-hover-border-color: var(--negro);
+  --bs-btn-active-color: var(--ceniza);
+  --bs-btn-active-bg: var(--negro);
+  --bs-btn-active-border-color: var(--negro);
+  --bs-btn-focus-shadow-rgb: 164, 44, 18;
+  --bs-btn-disabled-color: var(--gris-claro);
+  --bs-btn-disabled-bg: var(--rejilla);
+  --bs-btn-disabled-border-color: var(--rejilla);
+  --bs-btn-disabled-opacity: 1;
+}
+.btn-outline-dark {
+  --bs-btn-color: var(--negro);
+  --bs-btn-border-color: var(--negro);
+  --bs-btn-hover-color: var(--ceniza);
+  --bs-btn-hover-bg: var(--negro);
+  --bs-btn-hover-border-color: var(--negro);
+  --bs-btn-active-color: var(--ceniza);
+  --bs-btn-active-bg: var(--negro);
+  --bs-btn-active-border-color: var(--negro);
+}
+
+/* Tarjetas y lista */
+.card { --bs-card-border-color: var(--rejilla); }
+
+/* Formulario */
+.form-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.form-control {
+  background: var(--ceniza);
+  border: 1px solid var(--negro);
+}
+.form-control:focus {
+  background: var(--ceniza);
+  border-color: var(--ruby);
+  box-shadow: 0 0 0 1px var(--ruby);
+}
+
+/* Alerta */
+.alert-coffee {
+  --bs-alert-bg: var(--ceniza);
+  --bs-alert-color: var(--negro);
+  --bs-alert-border-color: var(--negro);
+  box-shadow: inset 4px 0 0 var(--ruby);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--negro);
+  color: var(--ceniza);
+}
+.site-footer .data { margin: 0; }
+.site-footer .data + .data { margin-top: 0.25rem; color: var(--gris-claro); }
+
+.card-img-top {
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  padding: 0.75rem;
+}
